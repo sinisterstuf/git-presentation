@@ -45,7 +45,6 @@
 
 \author{Si\^on~Le~Roux}
 
-%\institute{NBIC}
 \date{\today}
 
 \subject{Software Development}
@@ -65,11 +64,6 @@
   \end{frame}
 }
 
-% If you wish to uncover everything in a step-wise fashion, uncomment
-% the following command: 
-
-%\beamerdefaultoverlayspecification{<+->}
-
 \begin{document}
 
 \begin{frame}
@@ -80,17 +74,17 @@
 \begin{frame}[<+->]
   \frametitle{Introduction}
   \begin{itemize}
-	\item Why are we doing this?
-	\item Why git and Eclipse?
-	  \begin{itemize}
-		\item \textbf{Git}: best VCS\footnote{\href{http://git-scm.com/about}{git-scm.com/about}}
-		\item free project hosting on \textbf{GitHub}
-		\item does \textbf{distributed} Version Control
-		\item \textbf{Eclipse}: great Java IDE
-		\item \textbf{plug-in based} architecture
-	  \end{itemize}
-	\item Can we get a copy of this tutorial?\footnote{\href{http://sionleroux.com/files/git-presentation.pdf}{sionleroux.com/files/git-presentation.pdf}}
-	\item What do we aim to achieve?
+  \item Why are we doing this?
+  \item Why git and Eclipse?
+    \begin{itemize}
+    \item \textbf{Git}: best VCS\footnote{\href{http://git-scm.com/about}{git-scm.com/about}}
+    \item free project hosting on \textbf{GitHub}
+    \item does \textbf{distributed} Version Control
+    \item \textbf{Eclipse}: great Java IDE
+    \item \textbf{plug-in based} architecture
+    \end{itemize}
+  \item Can we get a copy of this tutorial?\footnote{\href{http://sionleroux.com/files/git-presentation.pdf}{sionleroux.com/files/git-presentation.pdf}}
+  \item What do we aim to achieve?
   \end{itemize}
 \end{frame}
 
@@ -99,32 +93,32 @@
 \begin{frame}[<+->]
   \frametitle{Installing Git}
   \begin{block}{GNU/Linux}
-	Install git from your package manager. On Debian based systems, that's: \texttt{\# aptitude install git}
+  Install git from your package manager. On Debian based systems, that's: \texttt{\# aptitude install git}
   \end{block}
   \begin{block}{Windows}
-	\begin{enumerate}
-	  \item Download the \emph{Git for Windows} installer from \href{http://msysgit.github.com}{msysgit.github.com}
-	  \item Follow the installation instructions following the installer's recommended ``safe'' options.
-	\end{enumerate}
+  \begin{enumerate}
+    \item Download the \emph{Git for Windows} installer from \href{http://msysgit.github.com}{msysgit.github.com}
+    \item Follow the installation instructions following the installer's recommended ``safe'' options.
+  \end{enumerate}
   \end{block}\pause
   You can now type \textbf{\texttt{git}} at the command prompt, and access the Git GUI on Windows.
 \end{frame}
 
 \begin{frame}[<+->]
   \frametitle{Setting up Git}
-	Follow instructions at \href{https://help.github.com/articles/set-up-git}{help.github.com/articles/set-up-git}
+  Follow instructions at \href{https://help.github.com/articles/set-up-git}{help.github.com/articles/set-up-git}
 
-  	In summary:\pause
+  In summary:\pause
   \begin{enumerate}
-	\item If you don't have one, create an account at \href{http://github.com}{github.com}
-	\item Generate a private-public ssh-keypair
-	\item Add the public key on GitHub
-	\item Set your name and e-mail in the global git config
+  \item If you don't have one, create an account at \href{http://github.com}{github.com}
+  \item Generate a private-public ssh-keypair
+  \item Add the public key on GitHub
+  \item Set your name and e-mail in the global git config
   \end{enumerate}
   \begin{block}{Setting name and e-mail}
-	\texttt{git config \--\--global user.name 'John Doe'}
+  \texttt{git config \--\--global user.name 'John Doe'}
 
-	\texttt{git config \--\--global user.email 'johndoe@gmail.com'}
+  \texttt{git config \--\--global user.email 'johndoe@gmail.com'}
   \end{block}\pause
   You can learn git at \href{http://git-scm.com/book}{git-scm.com/book}
 \end{frame}
@@ -133,36 +127,36 @@
 \begin{frame}[<+->]
   \frametitle{Getting Eclipse}
   \begin{block}{GNU/Linux}
-	Install eclipse from your package manager. On Debian based systems, that's: \texttt{\# aptitude install eclipse}
+  Install eclipse from your package manager. On Debian based systems, that's: \texttt{\# aptitude install eclipse}
   \end{block}
   \begin{block}{Windows}
-	\begin{enumerate}
-	  \item Download \emph{Eclipse Classic} from \href{http://www.eclipse.org/downloads/}{eclipse.org/downloads}
-	  \item Unzip the eclipse folder to \textit{Program Files}
-	  \item Create desktop and start menu shortcuts to \texttt{eclipse.exe}
-	\end{enumerate}
+  \begin{enumerate}
+    \item Download \emph{Eclipse Classic} from \href{http://www.eclipse.org/downloads/}{eclipse.org/downloads}
+    \item Unzip the eclipse folder to \textit{Program Files}
+    \item Create desktop and start menu shortcuts to \texttt{eclipse.exe}
+  \end{enumerate}
   \end{block}
 \end{frame}
 
 \begin{frame}[<+->]
   \frametitle{Installing the Plug-Ins}
   \begin{itemize}
-	\item Eclipse plug-ins can be installed from the marketplace:
-	  
-	  \texttt{Help > Eclipse Marketplace}
-	\item The required plug-ins are:
-	  \begin{description}
-		\item[EGit] for git support
-		\item[Mylyn] for bugtracking and task management
-		\item[Connector] GitHub Connector for Mylyn
-	  \end{description}
+  \item Eclipse plug-ins can be installed from the marketplace:
+
+    \texttt{Help > Eclipse Marketplace}
+  \item The required plug-ins are:
+    \begin{description}
+    \item[EGit] for git support
+    \item[Mylyn] for bugtracking and task management
+    \item[Connector] GitHub Connector for Mylyn
+    \end{description}
   \end{itemize}
   \begin{block}{Note}
-  	After restarting Eclipse you should be able to access the new Git and Task management perspectives:
+    After restarting Eclipse you should be able to access the new Git and Task management perspectives:
 
-	\begin{visibleenv}<6>
-	  \includegraphics{perspectives}
-	\end{visibleenv}
+  \begin{visibleenv}<6>
+    \includegraphics{perspectives}
+  \end{visibleenv}
   \end{block}
 \end{frame}
 
@@ -209,7 +203,7 @@ EGit provides the following context menu:
 
 \begin{frame}
   \begin{center}
-	{\bfseries \Huge The End}
+  {\bfseries \Huge The End}
   \end{center}
 \end{frame}
 
